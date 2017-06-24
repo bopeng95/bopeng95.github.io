@@ -37,10 +37,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#1"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home</a></li>
-            <li><a href="#2">About</a></li>
+            <li><a href="#1"><i class="fa fa-home fa-fw"></i> Home</a></li>
+            <li><a href="#2"><i class="fa fa-user-circle-o fa-fw"></i> About</a></li>
             <li><a href="#3">Resume</a></li>
-            <li><a href="#4">Contact</a></li>
+            <li><a href="#4"><i class="fa fa-feed fa-fw"></i> Contact</a></li>
             <li><a href="favorite.html">Favorites</a></li> 
           </ul>
         </div>
@@ -60,7 +60,7 @@
             <li id = "first" class="active"><a href="#1"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home<span class="sr-only">(current)</span></a></li>
             <li id = "sec"><a href="#2"><i class="fa fa-user-circle-o fa-fw"></i> About</a></li>
             <li id = "third"><a href="#3">Resume</a></li>
-            <li id = "fourth"><a href="#4">Contact</a></li>
+            <li id = "fourth"><a href="#4"><i class="fa fa-feed fa-fw"></i> Contact</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="favorite.html">Favorites</a></li>
@@ -111,14 +111,27 @@
         <!-- 4TH PAGE HERE -->
         <div id="4" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main fullpage fourth fade-in">
             <br>
-            <h1>Find me in any of these social networks!</h1>
+            <p id="contactmsg">Want to reach out to me? Send me a message!</p>
+
+            <div id ="formC">
+            <form action="https://formspree.io/pb0928@gmail.com"
+              method="POST">
+                <textarea name="message" col="80" row="8" placeholder="what would you like to say?" required></textarea><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+            </div>
+
+            <h1>...or find me in any of these social networks!</h1>
             <br>
-            <i id = "icon" class="fa fa-facebook fa-2x"></i>
-            <i id = "icon" class="fa fa-instagram fa-2x"></i>
-            <i id = "icon" class="fa fa-linkedin fa-2x"></i>
-            <i id = "icon" class="fa fa-tumblr fa-2x"></i>
-            <i id = "icon" class="fa fa-file-pdf-o fa-2x"></i>
-            <i id = "icon" class="fa fa-github-alt fa-2x"></i>
+            <div id = "contactIcon">
+            <i class="icon fa fa-facebook fa-2x"></i>
+            <i class="icon fa fa-instagram fa-2x"></i>
+            <i class="icon fa fa-linkedin fa-2x"></i>
+            <i class="icon fa fa-tumblr fa-2x"></i>
+            <i class="icon fa fa-file-pdf-o fa-2x"></i>
+            <i class="icon fa fa-github-alt fa-2x"></i>
+            </div>
         </div>
       </div>
     </div>

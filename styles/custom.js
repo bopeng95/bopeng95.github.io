@@ -9,7 +9,7 @@ $(document).ready(function() {
             $("#up").fadeOut();
         }
         });
-        
+
         var away = false;
         $("#up").click(function() {
             $("html, body").animate({

@@ -33,20 +33,28 @@
 */
 
 .fourth {
-    background-color: cornflowerblue;
+    background-color: white;
 }
 
 #formC{
     width:345px;
-    height:100px;
+
+    /* space between submit and lower msg */
+    height:90px;
+
     margin:85px auto 0 auto;
 }
 
 #contactmsg {
     font-size:40px;
     text-align: center;
-    height:270px;
-    padding-top: 180px;
+
+    /* space between top msg and box */
+    height:240px;
+
+    /* space between top and top msg */
+    padding-top: 140px;
+
     font-family: 'Catamaran', sans-serif;
 }
 
@@ -57,12 +65,18 @@ textarea {
 }
 
 #contactIcon {
-    text-align:center;
+    text-align: center;
 }
 
-.icon {
-    padding-right:20px;
-    text-align: center;
+#contactIcon a {
+    display:inline-block;
+    color:inherit;
+    margin-right:25px;
+}
+
+#contactIcon a:hover {
+    text-decoration: none;
+    color: rgb(226, 18, 255);
 }
 
 #up {

@@ -17,24 +17,19 @@ $(document).ready(function() {
             }, 700);
         });    
 
-        $("#sec").click(function() {
-            $("html, body").animate({
-                scrollTop: $("#2").offset().top
-            }, 700);
-        });
-        $("#first").click(function() {
+        $(".home").click(function() {
             $("html, body").animate({
                 scrollTop: $("#1").offset().top
             }, 700);
         });
-        $("#third").click(function() {
+        $(".about").click(function() {
             $("html, body").animate({
-                scrollTop: $("#3").offset().top
+                scrollTop: $("#2").offset().top
             }, 700);
         });
-        $("#fourth").click(function() {
+        $(".contact").click(function() {
             $("html, body").animate({
-                scrollTop: $("#4").offset().top
+                scrollTop: $("#3").offset().top
             }, 700);
         });
 

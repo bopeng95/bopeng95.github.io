@@ -47,18 +47,15 @@
         <!--DROPDOWN MENU-->
         <div id="navbar" class="navbar-collapse collapse">
 
-            <ul class="nav navbar-nav navbar-right">
-                <li>
+            <ul class="nav navbar-nav navbar-left">
+                <li class = "home">
                     <a href="#1"><i class="fa fa-home fa-fw"></i> Home</a>
                 </li>
-                <li>
+                <li class = "about">
                     <a href="#2"><i class="fa fa-user-circle-o fa-fw"></i> About</a>
                 </li>
-                <li>
-                    <a href="#3">Resume</a>
-                </li>
-                <li>
-                    <a href="#4"><i class="fa fa-feed fa-fw"></i> Contact</a>
+                <li class = "contact">
+                    <a href="#3"><i class="fa fa-feed fa-fw"></i> Contact</a>
                 </li>
                 <li>
                     <a href="favorite.html">Favorites</a>
@@ -81,19 +78,17 @@
             <!--1ST NAV SECTION-->
             <ul class="nav nav-sidebar">
                 <h2>Bo Peng</h2>
-                <li id = "first" class="active">
+                <hr>
+                <li class="home active">
                     <a href="#1"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li id = "sec">
+                <li class = "about">
                     <a href="#2"><i class="fa fa-user-circle-o fa-fw"></i> About</a>
                 </li>
-                <li id = "third">
-                    <a href="#3">Resume</a>
+                <li class = "contact">
+                    <a href="#3"><i class="fa fa-feed fa-fw"></i> Contact</a>
                 </li>
-                <li id = "fourth">
-                    <a href="#4"><i class="fa fa-feed fa-fw"></i> Contact</a>
-                </li>
-                </ul>
+            </ul>
 
             <!--2ND NAV SECTION-->
             <ul class="nav nav-sidebar">
@@ -101,7 +96,6 @@
                     <a href="favorite.html">Favorites</a>
                 </li>
             </ul>
-
         </div>
         
         <!-- 1ST PAGE HERE -->
@@ -112,58 +106,16 @@
         
         <!-- 2ND PAGE HERE -->
         <div id="2" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main fullpage second fade-in">
-          <h1 class="page-header">Dashboard</h1>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-          </div>
-
-          <h2 class="sub-header">Section title</h2>
+          <h1>Dashboard</h1>
         </div>
           
-        <!-- 3RD PAGE HERE -->
+        <!-- 3TH PAGE HERE -->
         <div id="3" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main fullpage third fade-in">
-            <h1>hello</h1>
-        </div>
-          
-        <!-- 4TH PAGE HERE -->
-        <div id="4" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main fullpage fourth fade-in">
             <br>
 
-            <p id="contactmsg">Want to reach out to me? Send me a message!</p>
+            <p id="contactmsg">Want to reach out to me?</p>
 
-            <!--FORM HERE-->
-            <div id ="formC">
-            <form action="https://formspree.io/pb0928@gmail.com"
-              method="POST">
-                <textarea name="message" col="80" row="8" placeholder="what would you like to say?" required></textarea><br>
-                
-                <input type="submit" value="Submit">
-            </form>
-            </div>
-            <!--END OF FORM-->
-
-            <h1>...or find me in any of these social networks!</h1>
-            <br>
+            <h1>Find me in any of these social networks or see my resume!</h1>
             <div id = "contactIcon">
                 <a target = "_blank" href="https://www.facebook.com/bopengisawesome">
                     <i class="fa fa-facebook fa-2x"></i>

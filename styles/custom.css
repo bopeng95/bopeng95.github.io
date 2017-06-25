@@ -4,85 +4,91 @@
 }
 
 .first h1 {
-    padding-top: 200px;
+    margin-top: 28vh;
     text-align: center;
     font-family: 'Catamaran', sans-serif;
-    font-size: 80px;
+    font-size: 10vh;
+    vertical-align: middle;
+
     /*color:dimgray;*/
 }
 
 .first p {
-    padding-top:80px;
+    margin-top:13vh;
     text-align: center;
     color:gray;
     font-family: 'Catamaran', sans-serif;
-    font-size: 20px; 
+    font-size: 2.75vh; 
 }
 
-.fourth h1 {
+.second {
+    background-color: #45a5ff;
+}
+
+.second h1 {
     text-align: center;
-    font-size:25px;
-    margin-top:80px;
+    padding-top: 20vh;
+    font-size:8vh;
+    color:white;
+}
+
+.third h1 {
+    text-align: center;
+    font-size:3vh;
+    margin-top:10vh;
+    margin-bottom:10vh;
     font-family: 'Catamaran', sans-serif;
-}
-
-/*
-.first {
-    background-color: aliceblue;
-}
-*/
-
-.fourth {
-    background-color: white;
-}
-
-#formC{
-    width:345px;
-
-    /* space between submit and lower msg */
-    height:90px;
-
-    margin:85px auto 0 auto;
 }
 
 #contactmsg {
-    font-size:40px;
+    font-size:6vh;
     text-align: center;
 
     /* space between top msg and box */
-    height:240px;
+    margin-bottom:6vh;
 
     /* space between top and top msg */
-    padding-top: 140px;
+    margin-top: 20vh;
 
     font-family: 'Catamaran', sans-serif;
-}
-
-textarea {
-    box-sizing: border-box;
-    width:100%;
-    height:100%;
 }
 
 #contactIcon {
     text-align: center;
+    font-size:2vh;
 }
 
 #contactIcon a {
     display:inline-block;
     color:inherit;
-    margin-right:25px;
+    margin-right:3vh;
+    -webkit-transition: all .25s ease; /* Safari and Chrome */
+    -moz-transition: all .25s ease; /* Firefox */
+    -ms-transition: all .25s ease; /* IE 9 */
+    -o-transition: all .25s ease; /* Opera */
+    transition:all .25s ease;
 }
 
 #contactIcon a:hover {
     text-decoration: none;
     color: rgb(226, 18, 255);
+    -webkit-transform:scale(1.26); /* Safari and Chrome */
+    -moz-transform:scale(1.26); /* Firefox */
+    -ms-transform:scale(1.26); /* IE 9 */
+    -o-transform:scale(1.26); /* Opera */
+    transform: scale(1.26);
+}
+
+.fav {
+    margin-top:10vh;
+    font-size:7vh;
 }
 
 #up {
     position:fixed;
     right:15px;
     bottom:15px;
+    display: none;
     cursor:pointer;
 }
 
@@ -93,6 +99,9 @@ textarea {
 @media (max-width: 767px) {
     #show {
         display: inherit;
+    }
+    .fav {
+        margin-top:17vh;
     }
 }
 

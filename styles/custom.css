@@ -22,13 +22,31 @@
 }
 
 .second {
-    background-color: #45a5ff;
+    position:relative;
+    overflow: hidden;
 }
 
-.second h1 {
-    text-align: center;
-    padding-top: 20vh;
-    font-size:8vh;
+.second img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:auto;
+    z-index: -1;
+}
+
+@media (max-width: 1350px) {
+    .second img {
+        height:100%;
+        width:auto;
+    }
+}
+
+.second p {
+    position:relative;
+    margin-top: 9vh;
+    font-size:4vh;
+    float:left;
     color:white;
 }
 

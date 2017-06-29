@@ -18,7 +18,7 @@
     text-align: center;
     color:gray;
     font-family: 'Catamaran', sans-serif;
-    font-size: 2.75vh; 
+    font-size: 2.6vh; 
 }
 
 .second {
@@ -26,20 +26,18 @@
     overflow: hidden;
 }
 
+.second p #nyu {
+    height:5.5vh;
+    width:5.5vh;
+}
+
 .second img{
     position:absolute;
     top:0;
     left:0;
     width:100%;
-    height:auto;
+    height:100%;
     z-index: -1;
-}
-
-@media (max-width: 1350px) {
-    .second img {
-        height:100%;
-        width:auto;
-    }
 }
 
 .second p {
@@ -48,6 +46,40 @@
     font-size:4vh;
     float:left;
     color:white;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.second p a {
+    text-decoration: none;
+    color:purple;
+}
+
+@media screen and (max-width:767px) {
+    .second img{
+        height:100%;
+        width:auto;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:767px) and (orientation:landscape) {
+    .second img{
+        height:auto;
+        width:100%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:portrait) {
+    .second img {
+        height:auto;
+        width:100%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape) {
+    .second img {
+        height:100%;
+        width:auto;
+    }
 }
 
 .third h1 {

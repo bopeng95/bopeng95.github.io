@@ -9,8 +9,6 @@
     font-family: 'Catamaran', sans-serif;
     font-size: 10vh;
     vertical-align: middle;
-
-    /*color:dimgray;*/
 }
 
 .first p {
@@ -21,14 +19,10 @@
     font-size: 2.6vh; 
 }
 
+/*
 .second {
     position:relative;
     overflow: hidden;
-}
-
-.second p #nyu {
-    height:5.5vh;
-    width:5.5vh;
 }
 
 .second img{
@@ -38,6 +32,19 @@
     width:100%;
     height:100%;
     z-index: -1;
+}
+*/
+.second {
+    background-image: url(../img/nyc59.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.second p #nyu {
+    height:5.5vh;
+    width:5.5vh;
 }
 
 .second p {
@@ -53,6 +60,8 @@
     text-decoration: none;
     color:purple;
 }
+/* 
+MEDIA SCREEN FOR SECOND IMG IF NOT USING BACKGROUND IMG CSS
 
 @media screen and (max-width:767px) {
     .second img{
@@ -81,6 +90,7 @@
         width:auto;
     }
 }
+*/
 
 .third h1 {
     text-align: center;
@@ -129,8 +139,9 @@
     transform: scale(1.26);
 }
 
-.fav {
-    margin-top:10vh;
+.fav p {
+    margin-top:28vh;
+    text-align: center;
     font-size:7vh;
 }
 
@@ -150,63 +161,4 @@
     #show {
         display: inherit;
     }
-    .fav {
-        margin-top:17vh;
-    }
-}
-
-/*FADE IN'S*/
-
-.fade-in {
-  animation: fadeIn ease 1.5s;
-  -webkit-animation: fadeIn ease 1.5s;
-  -moz-animation: fadeIn ease 1.5s;
-  -o-animation: fadeIn ease 1.5s;
-  -ms-animation: fadeIn ease 1.5s;
-}
-
-
-@keyframes fadeIn{
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
 }

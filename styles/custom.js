@@ -5,6 +5,7 @@ function barToggle() {
 $(document).ready(function() {
     /*var inSelection = false;*/
     var bars = $('#menu-toggle .icon-bar');
+    var up = $('#arrow');
 
     $("#menu-toggle").click(function(){
         bars.toggleClass('blacknwhite');   
@@ -18,13 +19,13 @@ $(document).ready(function() {
     */
     $(window).scroll(function() {
     if ($(this).scrollTop()) {
-        $("#up").fadeIn();
+        $("#arrow").fadeIn();
     } else {
-        $("#up").fadeOut();
+        $("#arrow").fadeOut();
     }
     });
 
-    $("#up").click(function() {
+    $("#arrow").click(function() {
         $("html, body").animate({
             scrollTop: 0
         }, 700);
@@ -60,12 +61,11 @@ $(document).ready(function() {
             scrollPosition < 0.9 * $("#2").offset().top + full_page_height
             && open == false)  {
             inSection = true;
-            bars.css('background-color', 'white');
+            up.addClass('invert');
         } else {
             inSection = false;
-            bars.css('background-color', 'black');
+            up.removeClass('invert');
         }
     });
     */
-
 });

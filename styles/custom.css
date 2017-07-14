@@ -85,7 +85,8 @@ html, body {
 }
 
 .second {
-    background-image: url(../img/nyc59.png);
+    /*background-image: url(../img/nyc59.png);*/
+    background-image: url(../img/nyc59small.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;

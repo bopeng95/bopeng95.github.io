@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300');
+
+* {
+	margin:0;
+	padding:0;
+}
+
+.alpha {
+	font-family: 'Work Sans', Sans-Serif;
+}
+
+.beta {
+	font-family: 'Open Sans', Sans-Serif;
+}
+
+.navbar {
+	font-size: 20px;
+}
+
+nav {
+	display: block;
+	height: 6.5rem;
+	background: #fff;
+}
+
+nav > ul {
+	list-style: none;
+}
+
+nav > ul > li {
+	display: inline-block;
+	float: left;
+	margin: 0 20px;
+}
+
+nav > ul > li > a {
+	text-decoration: none;
+	color:#AFB0B3;
+	letter-spacing: .1rem;
+	line-height: 7rem;
+}
+
+nav > ul > li > a:hover {
+	color:black;
+}

@@ -14,13 +14,71 @@
 }
 
 .navbar {
-	font-size: 20px;
+	font-size: 1.3em;
+}
+
+.active {
+	border-bottom: 1px solid gray;
+	color:black;
+}
+
+.gone {
+	display:none;
+}
+
+.home-info {
+	text-align: center;
+	padding-top:30px;
+}
+
+.home-pic {
+	padding-top:30px;
+}
+
+#me {
+	border-radius: 50%;
+	box-shadow:1px 1px 1px 1px #888;
+}
+@media(min-width: 500px) {
+	#me {width:90%;}
+}
+
+#city {
+	border-radius: 10%;
+	box-shadow:1px 1px 1px 1px #888;
+	width:80%;
+}
+
+#room {
+	border-radius: 10%;
+	box-shadow:1px 1px 1px 1px #888;
+	width:80%;
+	text-align: center;
+}
+
+#room-image {
+	margin:0 auto;
+}
+
+#aboutme {
+	font-size:20px;
+	line-height: 45px;
+	text-align:center;
+}
+
+table {
+	line-height:50px;
+}
+
+thead {
+	font-size:1.4em;
+	font-weight:bold;
 }
 
 nav {
 	display: block;
 	height: 6.5rem;
-	background: #fff;
+	margin:50px 0 40px 0; 
 }
 
 nav > ul {
@@ -30,16 +88,50 @@ nav > ul {
 nav > ul > li {
 	display: inline-block;
 	float: left;
-	margin: 0 20px;
+	margin: 0 4.85% 0 0;
 }
 
 nav > ul > li > a {
-	text-decoration: none;
 	color:#AFB0B3;
+	text-decoration: none;
 	letter-spacing: .1rem;
-	line-height: 7rem;
+	line-height: 3rem;
 }
 
 nav > ul > li > a:hover {
 	color:black;
+}
+
+label {
+	font-size: 18px;
+}
+
+#contact-form > input,textarea {
+	margin-bottom: 20px;
+}
+
+.social-icons > div {
+	text-align: center;
+}
+
+.social-icons > div > a {
+	display: inline-block;
+	margin:10px;
+	color:#AFB0B3;
+	cursor:pointer;
+}
+
+.social-icons > div > a:hover {
+	color:black;
+	-webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);   
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.scaling {
+    -webkit-transition: all 100ms ease-in;
+    -ms-transition: all 100ms ease-in; 
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
 }

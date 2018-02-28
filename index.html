@@ -1,47 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+	<head>
 
-        <!--META HERE-->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--META HERE-->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Bo Peng</title>
+		<title>Bo Peng</title>
 
-        <!-- FONT -->
-        <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+		<!-- FONT -->
+		<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
-        <!-- Bootstrap and CSS -->
-        <link href="css/skeleton.css" rel="stylesheet">
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="main.css" rel="stylesheet">
+		<!-- Bootstrap and CSS -->
+		<link href="css/skeleton.css" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/animate.css">
+		<link href="main.css" rel="stylesheet">
 
-        <!--JAVASCRIPT-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
-        <script src="main.js" type="text/javascript"></script>
+		<!--JAVASCRIPT-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+		<script src="main.js" type="text/javascript"></script>
 
-        <!--FAVICON-->
-        <link rel="icon" type="img/png" href="img/favicon.png">
+		<!--FAVICON-->
+		<link rel="icon" type="img/png" href="img/favicon.png">
 
-    </head>
+	</head>
 
-    <!--BODY STARTS HERE-->
-    <body >
-        
-        <div class="container">
+	<!--BODY STARTS HERE-->
+	<body >
+		
+		<div class="container">
 
-            <nav class="alpha navbar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Classes</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+			<nav class="alpha navbar">
+				<ul>
+					<li><a href="#" class="active">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
 
-        </div>
+			<!--CONTENT START-->
+			<div class="content animated fadeIn">
 
-    </body>
+				<div id="home">  
+					<section class="row">
+						<div class="one-half column home-info">
+							<p class="alpha" style="font-size:4.5em;">bo peng</p>
+							<div class="beta" style="font-size:1.5em;">
+								<p>New York University</p> 
+								<p>2014-2018</p><br>
+								<p>BS in Computer Science</p>
+								<a class="button" href="img/resume.pdf" target="_blank">Resume / CV</a>
+							</div>
+						</div>
+						<div class="one-half column home-pic">
+							<img id="me" src="img/bopeng.jpg" class="u-max-full-width">
+						</div>
+					</section>
+				</div>
+
+				<div id="contact" class="gone">  
+					<section class="row alpha">
+						<div class="one-half column mailform">
+							<h3>Message me!</h3>
+							<form id="contact-form" action="https://formspree.io/bopeng95@gmail.com" method="POST">
+								<label>Name</label>
+								<input class="u-full-width" placeholder="Bo Peng" type="text" name="name">
+								<label>Email</label>
+								<input class="u-full-width" placeholder="your@email.com" type="email" name="_replyto">
+								<br>
+								<label>Message</label>
+								<textarea class="u-full-width" placeholder="Hi Bo …" name="message"></textarea>
+								<button class="button-primary" type="submit" value="Send">Send</button>
+							</form>
+						</div>
+						<div class="one-half column social">
+							<div class="social-icons">
+								<br>
+								<div>
+									<a href="https://github.com/bopeng95" class="scaling" target="_blank">
+										<i class="fab fa-github fa-4x"></i>
+									</a>
+									<a href="https://www.linkedin.com/in/bo-peng-a53b4b139/" class="scaling" target="_blank">
+										<i class="fab fa-linkedin-in fa-4x"></i>
+									</a>
+									<a href="https://www.instagram.com/bopeng123/" class="scaling">
+										<i class="fab fa-instagram fa-4x"></i>
+									</a>
+									<a href="img/resume.pdf" class="scaling" target="_blank">
+										<i class="far fa-file-pdf fa-4x"></i>
+									</a>
+								</div><br><br><br>
+								<div id="room-image">
+									<img id="room" src="img/room.gif" class="u-max-full-width">
+								</div>
+							</div>
+						</div>
+					</section>
+					<br><br><br>
+				</div>
+
+				<div id="about" class="gone">
+					<section class="row">
+						<div class="one-half column">
+							<img id="city" src="img/city.gif" class="u-max-full-width">
+						</div>
+						<div class="one-half column">
+							<i class="far fa-address-card fa-3x"></i>
+							<h3 class="alpha" style="text-align:center;">Who am I?</h3>
+							<p id="aboutme" class="beta">I am a senior student in New York University majoring in
+							Computer Science with Economics and Web Design minors. I grew up Irvine, California
+							and moved to New York to pursue my goals as a software and web developer. </p>
+						</div>
+					</section>
+				</div>
+				
+			</div>
+			<!--CONTENT END-->
+
+		</div>
+
+	</body>
 </html>

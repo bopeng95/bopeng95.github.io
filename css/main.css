@@ -118,6 +118,19 @@ section {padding: 2.5rem 0;}
 	line-height:18px;
 }
 
+/*FUN
+==================*/
+.vid-container {
+	margin:0 auto;
+	text-align: center;
+}
+
+.vid {
+	border-radius: 5px;
+	width:70%;
+	height:auto;
+}
+
 /*CONTACT
 ==================*/
 label {

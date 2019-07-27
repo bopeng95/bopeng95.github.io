@@ -1,7 +1,0 @@
-#heroTitle { font-size: 40px; }
-.navbar-item > a { 
-	color: gray;
-	cursor: pointer; 
-	font-size: 22px;
-}
-.navbar-item > a:hover { color: black; }

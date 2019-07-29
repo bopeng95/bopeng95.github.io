@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --env.NODE_ENV=development --open",
     "build": "webpack --env.NODE_ENV=production",
-	"predeploy": "npm run build",
-	"deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,8 @@
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.6",
     "react": "^16.8.6",
-    "react-hot-loader": "^4.12.10"
+    "react-hot-loader": "^4.12.10",
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

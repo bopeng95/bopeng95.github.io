@@ -24,6 +24,7 @@
   "_id": "bopeng95.github.io@1.0.0",
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.6",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-hot-loader": "^4.12.10",
     "react-router-dom": "^5.0.1"

@@ -1,7 +1,7 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import {
-	HashRouter as Router,
+	BrowserRouter as Router,
 	Route,
 	Switch
 } from 'react-router-dom';
@@ -13,7 +13,7 @@ import Contact from './Contact.jsx';
 
 const App = () => {
 	return (
-		<Router>
+		<Router basename={process.env.PUBLIC_URL}>
 			<div className="container">
 				<Header/>
 				<Switch>

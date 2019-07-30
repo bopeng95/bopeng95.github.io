@@ -3,7 +3,7 @@ import React from 'react';
 const Photos = () => {
 	return (
 		<section>
-			Photos
+			<p>photos coming soon</p>
 		</section>
 	)
 }

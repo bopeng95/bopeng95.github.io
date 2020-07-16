@@ -4,18 +4,13 @@ import { ThemeProvider } from 'styled-components';
 import 'sanitize.css';
 
 import App from 'containers/App';
-import Header from 'components/Header';
-import Container from 'components/Container';
 
 import { GlobalStyle, theme } from './global-styles';
 
 const render = Component =>
   ReactDom.render(
     <ThemeProvider theme={theme}>
-      <Container maxWidth={500}>
-        <Header title="bo peng" />
-        <Component />
-      </Container>
+      <Component />
       <GlobalStyle />
     </ThemeProvider>,
     document.querySelector('#root'),

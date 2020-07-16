@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.header`
-  padding: 20px;
-  @media (min-width: ${({ theme }) => theme.display.tablet}px) {
-    padding: 40px 25px 25px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: ${({ full }) => (full ? '100vh' : '450px')};
+  background-image: url("${({ cover }) => cover}");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 `;

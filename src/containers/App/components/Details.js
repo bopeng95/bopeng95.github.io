@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Text from 'components/Text';
-import { Section } from '../styles';
+import Section from 'components/Section';
 
 const Details = ({ title = 'title' }) => (
   <Section gutter>
@@ -20,7 +20,6 @@ const Details = ({ title = 'title' }) => (
       applications using React, Redux, and Node while contributing to open
       source tools and side projects
     </Text>
-    <Text color="gray">i like everything in lowercase :)</Text>
   </Section>
 );
 

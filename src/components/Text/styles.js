@@ -6,11 +6,13 @@ export const Wrapper = styled.span`
     type,
     color = 'black',
     spanColor,
+    gutterTop,
     gutter = false,
     asButton,
   }) => css`
     ${theme.text[type].style};
-    margin-bottom: ${gutter && '18px'};
+    margin-top: ${gutterTop && '15px'};
+    margin-bottom: ${gutter && '15px'};
     color: ${theme.colors[color]};
     cursor: ${asButton && 'pointer'};
     & > * {

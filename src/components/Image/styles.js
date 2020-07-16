@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.section`
   ${({ width, height, src, borderRadius, opacity }) => css`
+    border: 2px solid whitesmoke;
     width: ${width && width};
     height: ${height && height};
     border-radius: ${borderRadius && borderRadius};

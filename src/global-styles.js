@@ -11,8 +11,9 @@ export const theme = {
   },
   colors: {
     link: '#ff8396',
-    black: '#000000',
+    black: '#262626',
     gray: '#808080',
+    white: '#f5f5f5',
   },
   text: {
     title: {

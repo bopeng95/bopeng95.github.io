@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Text from 'components/Text';
-import { Section } from '../styles';
+import Section from 'components/Section';
 
 const Contact = ({ Resume }) => (
   <Section gutter>

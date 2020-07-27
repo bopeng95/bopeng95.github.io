@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CopyrightIcon from 'components/Icons/CopyrightIcon';
+import Icon from 'components/Icon';
 import Text from 'components/Text';
 import Section from 'components/Section';
 
@@ -11,7 +11,13 @@ const Copyright = props => {
       <Text type="subscript" color="gray">
         Copyright
       </Text>
-      <CopyrightIcon color="gray" size={14} left right />
+      <Icon
+        icon={['fas', 'copyright']}
+        size={14}
+        color="gray"
+        left={5}
+        right={5}
+      />
       <Text type="subscript" color="gray">
         {`${name} ${year}`}
       </Text>

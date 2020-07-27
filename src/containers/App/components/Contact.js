@@ -1,49 +1,36 @@
 import React from 'react';
 
+import A from 'components/A';
+import Flex from 'components/Flex';
 import Text from 'components/Text';
 import Section from 'components/Section';
+import Icon from 'components/Icon';
 
-const Contact = ({ Resume }) => (
-  <Section gutter>
-    <Text type="subtitle" gutter>
-      contact
-    </Text>
-    <Section lineHeight={2.2}>
-      <Text color="gray" spanColor="link">
-        email me at{' '}
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="mailto:bopeng95@gmail.com"
-        >
-          bopeng95@gmail.com
-        </a>
+const Contact = ({ links = [] }) => {
+  const list = links.map(item => {
+    const { link, icon, color = 'black' } = item;
+    return (
+      <A key={link} href={link}>
+        <Icon
+          icon={icon}
+          right={15}
+          size={24}
+          asButton
+          color="gray"
+          hoverColor={color}
+        />
+      </A>
+    );
+  });
+
+  return (
+    <Section gutter>
+      <Text type="subtitle" gutter>
+        contact
       </Text>
-      <Text color="gray" spanColor="link">
-        follow me on{' '}
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://www.linkedin.com/in/bopeng95/"
-        >
-          linkedin
-        </a>{' '}
-        and{' '}
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://github.com/bopeng95"
-        >
-          github
-        </a>
-      </Text>
-      <Text spanColor="link">
-        <a rel="noopener noreferrer" target="_blank" href={Resume}>
-          resume
-        </a>
-      </Text>
+      <Flex>{list}</Flex>
     </Section>
-  </Section>
-);
+  );
+};
 
 export default Contact;

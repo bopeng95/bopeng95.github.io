@@ -13,6 +13,8 @@ export const theme = {
     link: '#ff8396',
     black: '#262626',
     gray: '#808080',
+    blue: '#0e76a8',
+    tan: '#f1d592',
     white: '#f5f5f5',
   },
   text: {

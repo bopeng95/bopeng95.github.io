@@ -32,7 +32,7 @@ export const Wrapper = styled.section`
         opacity: 0;
         position: relative;
         animation: ${fadeToTop} ${delay}s ease-out 1s forwards;
-        ${delayAnimation(length, 0.2, delay)};
+        ${delayAnimation(length, 0.2)};
         will-change: animation, opacity, top;
       }
     `};

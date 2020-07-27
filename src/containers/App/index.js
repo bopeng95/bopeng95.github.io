@@ -1,27 +1,35 @@
 import React from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import Header from 'components/Header';
 import Container from 'components/Container';
 import Main from 'components/Main';
-import Fade from 'components/Fade';
 import Copyright from 'components/Copyright';
+import Tabs from 'components/Tabs';
 
 import Cover from 'assets/cover.jpg';
 import Me from 'assets/me.jpg';
-import Resume from 'assets/resume.pdf';
 
-import Details from './components/Details';
-import Contact from './components/Contact';
+import { menu, links, projects } from 'fixed';
+
+import About from './components/About';
+import Projects from './components/Projects';
+
+library.add(fab, fas);
 
 const App = () => {
+  const PageOne = <About links={links} />;
+  const PageTwo = <Projects list={projects} />;
+
+  const components = [PageOne, PageTwo];
+
   return (
     <Container fullWidth>
       <Header title="bo peng" cover={Cover} profile={Me} />
-      <Main maxWidth={700}>
-        <Fade delay={0.6}>
-          <Details title="about" />
-          <Contact Resume={Resume} />
-        </Fade>
+      <Main maxWidth={750}>
+        <Tabs menu={menu} components={components} />
         <Copyright name="Bo Peng" year="2020" />
       </Main>
     </Container>

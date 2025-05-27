@@ -1,4 +1,5 @@
 import { Email, GitHub, LinkedIn, SaveAlt } from '@mui/icons-material';
+
 import resume from '../assets/resume.pdf';
 
 type Links = {

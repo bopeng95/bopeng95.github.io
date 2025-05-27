@@ -1,4 +1,5 @@
-import { Typography, Tooltip, styled } from '@mui/material';
+import { styled, Tooltip, Typography } from '@mui/material';
+
 import { ExternalIconLink } from './components/ExternalIconLink';
 import { links } from './utils/links';
 

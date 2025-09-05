@@ -25,6 +25,5 @@ export const links: Links[] = [
   {
     href: resume,
     Icon: SaveAlt,
-    tooltipText: 'resume is currently outdated',
   },
 ];

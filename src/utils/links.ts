@@ -1,4 +1,4 @@
-import { Email, GitHub, LinkedIn, SaveAlt } from '@mui/icons-material';
+import { Email, GitHub, LinkedIn, Description } from '@mui/icons-material';
 
 import resume from '../assets/resume.pdf';
 
@@ -24,6 +24,7 @@ export const links: Links[] = [
   },
   {
     href: resume,
-    Icon: SaveAlt,
+    Icon: Description,
+    tooltipText: 'Resume',
   },
 ];

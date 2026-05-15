@@ -2,6 +2,7 @@ export { Dotfiles } from './Dotfiles';
 export { DotfilesLegend } from './DotfilesLegend';
 export { DotfilesTile } from './DotfilesTile';
 export { Experience } from './Experience';
+export { Footer } from './Footer';
 export { Hero } from './Hero';
 export { Job } from './Job';
 export { PokemonSprite } from './PokemonSprite';

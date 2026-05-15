@@ -81,20 +81,8 @@ export function Dotfiles() {
             />
             <Separator className="bg-accent w-12" />
           </div>
-          <PokemonSprite name="porygonz" className="h-10 sm:h-12" />
+          <PokemonSprite name="klinklang" className="h-10 sm:h-12" />
         </div>
-        <p className="text-muted-foreground text-sm sm:text-base">
-          managed with{' '}
-          <a
-            href="https://www.chezmoi.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground decoration-accent/40 hover:decoration-accent underline underline-offset-4"
-          >
-            chezmoi
-          </a>
-          .
-        </p>
       </div>
 
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-5">

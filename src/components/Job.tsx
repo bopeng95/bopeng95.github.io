@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 
+import { PokemonSprite } from '@/components/PokemonSprite';
 import type { Job as JobType } from '@/types';
 import { cn } from '@/utils/cn';
 
@@ -18,12 +19,13 @@ function formatRange(start: string, end: string): string {
 }
 
 export function Job({ job, left, width, isPresent, index }: JobProps) {
-  const { company, title, date, tech, companyUrl } = job;
+  const { company, title, date, tech, companyUrl, pokemon } = job;
 
   const leftPct = `${(left * 100).toFixed(3)}%`;
   const widthPct = `${(width * 100).toFixed(3)}%`;
   const barDelay = `${320 + index * 140}ms`;
   const labelDelay = `${520 + index * 140}ms`;
+  const spriteDelay = `${1070 + index * 140}ms`;
   const barColor = BAR_COLORS[index % BAR_COLORS.length];
 
   const barStyle: CSSProperties = {
@@ -36,6 +38,12 @@ export function Job({ job, left, width, isPresent, index }: JobProps) {
     marginLeft: leftPct,
     maxWidth: `calc(100% - ${leftPct})`,
     animationDelay: labelDelay,
+  };
+
+  const spriteStyle: CSSProperties = {
+    left: `calc(${leftPct} + ${widthPct} + 0.7rem)`,
+    animationDelay: spriteDelay,
+    top: '-5px',
   };
 
   const companyNode = companyUrl ? (
@@ -77,6 +85,17 @@ export function Job({ job, left, width, isPresent, index }: JobProps) {
             />
           </>
         )}
+      </div>
+      <div
+        aria-hidden="true"
+        style={spriteStyle}
+        className="absolute -translate-y-1/2 motion-safe:animate-[fade-in_450ms_ease-out_both]"
+      >
+        <PokemonSprite
+          name={pokemon}
+          alt=""
+          className="h-8 max-w-none sm:h-10"
+        />
       </div>
       <div
         style={labelStyle}

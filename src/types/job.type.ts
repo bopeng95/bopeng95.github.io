@@ -10,4 +10,5 @@ export type Job = {
   location?: string;
   tech: string[];
   companyUrl?: string;
+  pokemon: string;
 };

@@ -8,6 +8,7 @@ export const jobs: Job[] = [
     location: 'New York, NY',
     tech: ['react', 'typescript', 'playwright', 'java'],
     companyUrl: 'https://aws.amazon.com',
+    pokemon: 'umbreon',
   },
   {
     company: 'Fanbyte',
@@ -16,6 +17,7 @@ export const jobs: Job[] = [
     location: 'Los Angeles, CA',
     tech: ['vue', 'wordpress', 'node'],
     companyUrl: 'https://www.fanbyte.com/',
+    pokemon: 'flareon',
   },
   {
     company: 'ManageGo',
@@ -24,5 +26,6 @@ export const jobs: Job[] = [
     location: 'New York, NY',
     tech: ['react'],
     companyUrl: 'https://www.managego.com/',
+    pokemon: 'leafeon',
   },
 ];

@@ -8,7 +8,12 @@ import {
 } from '@/components';
 import { Separator } from '@/components/ui/separator';
 import { dotfiles } from '@/constants';
-import { flattenLeaves, getGroupOrder, squarifyTreemap } from '@/utils';
+import {
+  flattenLeaves,
+  getGroupOrder,
+  squarifyTreemap,
+  type TreemapTile,
+} from '@/utils';
 
 const CANVAS_W = 16;
 const CANVAS_H = 10;
@@ -30,6 +35,26 @@ const TILE_TEXT_COLORS = [
   'text-accent-foreground',
 ] as const;
 
+function getTileArea(tile: TreemapTile) {
+  return tile.width * tile.height;
+}
+
+function getLargestTilePath(tiles: TreemapTile[]) {
+  if (tiles.length === 0) {
+    return null;
+  }
+
+  const largestTile = tiles.reduce((currentLargest, tile) => {
+    const tileArea = getTileArea(tile);
+    const currentLargestArea = getTileArea(currentLargest);
+    const isLargerTile = tileArea > currentLargestArea;
+
+    return isLargerTile ? tile : currentLargest;
+  });
+
+  return largestTile.leaf.path;
+}
+
 export function Dotfiles() {
   const [hoveredGroup, setHoveredGroup] = useState<string | null>(null);
 
@@ -42,6 +67,8 @@ export function Dotfiles() {
     () => getGroupOrder(tiles.map((t) => t.leaf)),
     [tiles],
   );
+
+  const largestTilePath = useMemo(() => getLargestTilePath(tiles), [tiles]);
 
   return (
     <section className="mt-28 flex flex-col gap-10 sm:mt-40 sm:gap-12">
@@ -83,6 +110,7 @@ export function Dotfiles() {
             const hasHoveredGroup = hoveredGroup !== null;
             const isHighlighted = hoveredGroup === tile.leaf.group;
             const isDimmed = hasHoveredGroup && !isHighlighted;
+            const hasPokemonSprite = tile.leaf.path === largestTilePath;
             return (
               <DotfilesTile
                 key={tile.leaf.path}
@@ -94,6 +122,7 @@ export function Dotfiles() {
                 delayMs={index * 18}
                 isHighlighted={isHighlighted}
                 isDimmed={isDimmed}
+                hasPokemonSprite={hasPokemonSprite}
               />
             );
           })}

@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 
+import { PokemonSprite } from '@/components/PokemonSprite';
 import { DOTFILES_REPO } from '@/constants';
 import { cn, formatBytes, type TreemapTile } from '@/utils';
 
@@ -17,6 +18,7 @@ type DotfilesTileProps = {
   delayMs: number;
   isHighlighted: boolean;
   isDimmed: boolean;
+  hasPokemonSprite: boolean;
 };
 
 export function DotfilesTile({
@@ -28,6 +30,7 @@ export function DotfilesTile({
   delayMs,
   isHighlighted,
   isDimmed,
+  hasPokemonSprite,
 }: DotfilesTileProps) {
   const { leaf, x, y, width, height } = tile;
   const leftPct = `${((x / canvasWidth) * 100).toFixed(3)}%`;
@@ -73,6 +76,13 @@ export function DotfilesTile({
             </div>
           )}
         </div>
+      )}
+      {hasPokemonSprite && (
+        <PokemonSprite
+          name="manaphy"
+          alt=""
+          className="pointer-events-none absolute left-1/2 top-1/2 h-10 max-h-[60%] max-w-[60%] -translate-x-1/2 -translate-y-1/2 object-contain opacity-95 drop-shadow-lg sm:h-20 sm:max-h-[72%] sm:max-w-[72%]"
+        />
       )}
     </a>
   );

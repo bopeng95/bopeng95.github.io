@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "fetch-dotfiles": "node scripts/fetch-dotfiles.mjs",
+    "prebuild": "npm run fetch-dotfiles",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
@@ -41,6 +43,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "globals": "^16.0.0",
     "prettier": "3.5.3",
+    "shadcn": "^4.7.0",
     "tailwindcss": "^4.3.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",

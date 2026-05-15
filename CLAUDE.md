@@ -12,7 +12,7 @@ Personal website using Shadcn UI with React
 - `npm run format:check` — checks if formatting matches with prettier
 - `npm run deploy` — production build
 
-Do not run `npm run dev` or `npm run deploy`, assume the server is on and user will manually deploy.
+Do not run `npm run dev`, `npm run build`, or `npm run deploy`; assume the server is already running and the user will build/deploy manually.
 Run `npm run format` whenever changes are made.
 
 ## Architecture
@@ -31,9 +31,11 @@ Each directory listed should include an `index.ts` file that exports everything 
 
 This project uses the shadcn/ui framework. Whenever creating new components or making UI changes:
 
+- Use the `frontend-design` skill whenever designing UI — visual direction, layout, hierarchy, and any time the request is about how something should look or feel. Invoke it before writing markup so design decisions are grounded in the skill's guidance.
+- Use the `color-expert` skill (`.agents/skills/color-expert/SKILL.md`) whenever choosing colors — palettes, theme tokens, accent hues, gradients, contrast decisions, or any time the request involves picking or refining color. Invoke it before committing color values to CSS variables or Tailwind classes.
 - Use the `shadcn` skill (`.agents/skills/shadcn/SKILL.md`) to learn the framework's rules, patterns, and composition principles.
 - Use the shadcn MCP server (configured in `.mcp.json`) to search registries, view component details, fetch usage examples, and get install commands before writing custom markup.
-- Prefer existing shadcn components over custom-built UI. Compose primitives (Card, Badge, Separator, etc.) rather than reinventing them with styled divs.
+- Prefer existing shadcn components over custom-built UI. Find relevant components in shadcn mcp first rather than reinventing them with styled divs as last resort.
 - Install components via the shadcn CLI (`npx shadcn@latest add <component>`); they land in `/src/components/ui`.
 
 ## Code Styling

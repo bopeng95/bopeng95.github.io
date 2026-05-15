@@ -3,6 +3,7 @@ export { DotfilesLegend } from './DotfilesLegend';
 export { DotfilesTile } from './DotfilesTile';
 export { Experience } from './Experience';
 export { Footer } from './Footer';
+export { FunEndeavors } from './FunEndeavors';
 export { Hero } from './Hero';
 export { Job } from './Job';
 export { PokemonSprite } from './PokemonSprite';

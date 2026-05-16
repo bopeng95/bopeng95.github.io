@@ -1,6 +1,4 @@
-import { Dotfiles } from '@/components/Dotfiles';
-import { PokemonSprite } from '@/components/PokemonSprite';
-import { TypewriterText } from '@/components/TypewriterText';
+import { Dotfiles, PokemonSprite, TypewriterText } from '@/components';
 import { Separator } from '@/components/ui/separator';
 
 export function FunEndeavors() {

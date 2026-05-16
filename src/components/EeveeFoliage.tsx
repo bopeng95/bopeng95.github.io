@@ -1,17 +1,21 @@
-import type { CSSProperties, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 import {
   FOLIAGE_LAYOUT,
+  type FoliageLayer,
+  type FoliageVisibility,
   GRASS_TUFT,
+  LOW_GRASS,
   PINE_TREE,
   PINK_FLOWER,
   PIXEL_LEGEND,
+  ROCK,
   ROUND_TREE,
   SCALE,
+  type SpriteName,
+  TALL_GRASS,
   TREE_SCALE,
   WARM_FLOWER,
-  type FoliageVisibility,
-  type SpriteName,
 } from '@/constants/foliage.constant';
 import { cn } from '@/utils/cn';
 
@@ -62,17 +66,19 @@ const SPRITES: Record<SpriteName, SpriteData> = {
   pine: buildSprite(PINE_TREE, TREE_SCALE),
   round: buildSprite(ROUND_TREE, TREE_SCALE),
   grass: buildSprite(GRASS_TUFT),
+  'low-grass': buildSprite(LOW_GRASS),
+  'tall-grass': buildSprite(TALL_GRASS),
   'pink-flower': buildSprite(PINK_FLOWER),
   'warm-flower': buildSprite(WARM_FLOWER),
+  rock: buildSprite(ROCK),
 };
 
 type SpriteProps = {
   className?: string;
-  style?: CSSProperties;
   sprite: SpriteData;
 };
 
-function Sprite({ className, style, sprite }: SpriteProps) {
+function Sprite({ className, sprite }: SpriteProps) {
   return (
     <svg
       width={sprite.width}
@@ -81,29 +87,31 @@ function Sprite({ className, style, sprite }: SpriteProps) {
       shapeRendering="crispEdges"
       role="presentation"
       className={className}
-      style={style}
     >
       {sprite.rects}
     </svg>
   );
 }
 
-export function EeveeFoliage() {
+type EeveeFoliageProps = {
+  layer: FoliageLayer;
+};
+
+export function EeveeFoliage({ layer }: EeveeFoliageProps) {
+  const sprites = FOLIAGE_LAYOUT.filter((item) => item.layer === layer);
+
   return (
-    <div
-      aria-hidden="true"
-      className="eevee-foliage pointer-events-none absolute inset-0"
-    >
-      {FOLIAGE_LAYOUT.map(
-        ({ sprite, position, visibility = 'always' }, index) => (
+    <div className={cn('eevee-foliage pointer-events-none absolute inset-0')}>
+      {sprites.map(
+        ({ sprite, positionClass, visibility = 'always' }, index) => (
           <Sprite
-            key={index}
+            key={`${layer}-${index}`}
             sprite={SPRITES[sprite]}
             className={cn(
               'absolute bottom-0 -translate-x-1/2',
+              positionClass,
               VISIBILITY_CLASSES[visibility],
             )}
-            style={{ left: `${position}%` }}
           />
         ),
       )}

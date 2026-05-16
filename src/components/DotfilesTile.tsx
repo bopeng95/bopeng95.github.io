@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 
-import { PokemonSprite } from '@/components/PokemonSprite';
+import { PokemonSprite } from '@/components';
 import { DOTFILES_REPO } from '@/constants';
 import { cn, formatBytes, type TreemapTile } from '@/utils';
 

@@ -1,8 +1,6 @@
 import type { CSSProperties } from 'react';
 
-import { Job } from '@/components/Job';
-import { PokemonSprite } from '@/components/PokemonSprite';
-import { TypewriterText } from '@/components/TypewriterText';
+import { Job, PokemonSprite, TypewriterText } from '@/components';
 import { Separator } from '@/components/ui/separator';
 import { jobs } from '@/constants';
 import { buildTimeline, getJobPosition, getYearPosition } from '@/utils';

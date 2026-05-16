@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 
-import { PokemonSprite } from '@/components/PokemonSprite';
+import { PokemonSprite } from '@/components';
 import type { Job as JobType } from '@/types';
 import { cn } from '@/utils/cn';
 

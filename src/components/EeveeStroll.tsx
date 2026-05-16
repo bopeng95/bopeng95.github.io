@@ -1,6 +1,6 @@
 import { type CSSProperties, useEffect, useState } from 'react';
 
-import { PokemonSprite } from '@/components/PokemonSprite';
+import { PokemonSprite } from '@/components';
 
 const MIN_POSITION = 8;
 const MAX_POSITION = 92;
@@ -69,7 +69,7 @@ export function EeveeStroll() {
   };
 
   return (
-    <div aria-hidden="true" className="relative h-12 w-full">
+    <div className="absolute inset-0">
       <div className="absolute bottom-0" style={positionStyle}>
         <div style={flipStyle}>
           <PokemonSprite name="eevee" alt="" className="h-12" />

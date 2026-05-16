@@ -1,6 +1,6 @@
 import { FileText, Mail } from 'lucide-react';
 
-import { GithubIcon, LinkedinIcon } from '@/components/icons';
+import { GithubIcon, LinkedinIcon } from '@/components';
 import type { SocialLink } from '@/types';
 
 export const socialLinks: SocialLink[] = [

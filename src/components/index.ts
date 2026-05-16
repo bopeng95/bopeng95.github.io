@@ -1,6 +1,8 @@
 export { Dotfiles } from './Dotfiles';
 export { DotfilesLegend } from './DotfilesLegend';
 export { DotfilesTile } from './DotfilesTile';
+export { EeveeFoliage } from './EeveeFoliage';
+export { EeveeStroll } from './EeveeStroll';
 export { Experience } from './Experience';
 export { Footer } from './Footer';
 export { FunEndeavors } from './FunEndeavors';

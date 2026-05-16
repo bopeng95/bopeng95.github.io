@@ -135,6 +135,57 @@
   }
 }
 
+@layer components {
+  .eevee-foliage {
+    --eevee-foliage-tree: oklch(0.58 0.09 142);
+    --eevee-foliage-tree-shadow: oklch(0.44 0.08 145);
+    --eevee-foliage-trunk: oklch(0.42 0.05 50);
+    --eevee-foliage-grass: oklch(0.64 0.1 138);
+    --eevee-foliage-grass-shadow: oklch(0.5 0.08 142);
+    --eevee-foliage-petal-pink: oklch(0.72 0.16 12);
+    --eevee-foliage-petal-warm: oklch(0.82 0.14 70);
+    --eevee-foliage-flower-center: oklch(0.88 0.14 90);
+  }
+
+  .eevee-foliage rect[data-pixel='tree'] {
+    fill: var(--eevee-foliage-tree);
+  }
+  .eevee-foliage rect[data-pixel='tree-shadow'] {
+    fill: var(--eevee-foliage-tree-shadow);
+  }
+  .eevee-foliage rect[data-pixel='trunk'] {
+    fill: var(--eevee-foliage-trunk);
+  }
+  .eevee-foliage rect[data-pixel='grass'] {
+    fill: var(--eevee-foliage-grass);
+  }
+  .eevee-foliage rect[data-pixel='grass-shadow'] {
+    fill: var(--eevee-foliage-grass-shadow);
+  }
+  .eevee-foliage rect[data-pixel='petal-pink'] {
+    fill: var(--eevee-foliage-petal-pink);
+  }
+  .eevee-foliage rect[data-pixel='petal-warm'] {
+    fill: var(--eevee-foliage-petal-warm);
+  }
+  .eevee-foliage rect[data-pixel='flower-center'] {
+    fill: var(--eevee-foliage-flower-center);
+  }
+
+  .eevee-ground {
+    --eevee-ground-surface: oklch(0.52 0.1 140);
+    --eevee-ground-mid: oklch(0.43 0.09 142);
+    --eevee-ground-deep: oklch(0.36 0.08 142);
+
+    background: linear-gradient(
+      in oklab to bottom,
+      var(--eevee-ground-surface) 0%,
+      var(--eevee-ground-mid) 55%,
+      var(--eevee-ground-deep) 100%
+    );
+  }
+}
+
 @layer utilities {
   .pixelated {
     image-rendering: pixelated;

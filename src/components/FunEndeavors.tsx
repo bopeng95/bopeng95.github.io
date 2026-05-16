@@ -14,7 +14,7 @@ export function FunEndeavors() {
           />
           <Separator className="bg-accent w-12" />
         </div>
-        <PokemonSprite name="klinklang" className="h-10 sm:h-12" />
+        <PokemonSprite name="sylveon" className="h-10 sm:h-12" />
       </div>
 
       <div className="mx-auto w-full max-w-4xl">

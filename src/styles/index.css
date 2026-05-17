@@ -149,8 +149,8 @@
   }
 
   .eevee-mountains {
-    --eevee-mountain-far: oklch(0.34 0.035 232);
-    --eevee-mountain-near: oklch(0.42 0.045 170);
+    --eevee-mountain-far: oklch(0.34 0.018 250);
+    --eevee-mountain-near: oklch(0.45 0.022 245);
 
     height: 7.75rem;
   }

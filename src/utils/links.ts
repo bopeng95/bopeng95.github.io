@@ -2,8 +2,6 @@ import type { IconType } from 'react-icons';
 import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 
-import resume from '../assets/resume.pdf';
-
 type Links = {
   href: string;
   Icon: IconType;
@@ -25,7 +23,7 @@ export const links: Links[] = [
     tooltipText: 'bopeng95@gmail.com',
   },
   {
-    href: resume,
+    href: '/resume.pdf',
     Icon: FaFilePdf,
     tooltipText: 'Resume',
   },

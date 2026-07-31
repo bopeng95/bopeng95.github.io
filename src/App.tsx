@@ -1,6 +1,9 @@
+import { CollapsibleSection } from './components/CollapsibleSection';
 import { ExternalIconLink } from './components/ExternalIconLink';
 import { ProjectList } from './components/ProjectList';
 import { ThemeToggle } from './components/ThemeToggle';
+import { WorkHistoryList } from './components/WorkHistoryList';
+import { jobs } from './utils/jobs';
 import { links } from './utils/links';
 import { projects } from './utils/projects';
 
@@ -27,12 +30,14 @@ export const App = () => {
             className="h-8 w-auto"
           />
         </h1>
-        <p>frontend engineer II @ aws</p>
+        <p>frontend engineer</p>
         <div className="mt-4 flex">{contactLinks}</div>
-        <section className="mt-12">
-          <h2 className="font-display text-lg font-semibold">fun endeavors</h2>
+        <CollapsibleSection title="work history">
+          <WorkHistoryList jobs={jobs} />
+        </CollapsibleSection>
+        <CollapsibleSection title="fun endeavors">
           <ProjectList projects={projects} />
-        </section>
+        </CollapsibleSection>
       </main>
       <footer className="mx-auto w-full max-w-2xl px-5 py-4">
         <p className="text-sm opacity-60">© {new Date().getFullYear()}</p>

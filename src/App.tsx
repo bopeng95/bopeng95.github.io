@@ -1,6 +1,8 @@
 import { ExternalIconLink } from './components/ExternalIconLink';
+import { ProjectList } from './components/ProjectList';
 import { ThemeToggle } from './components/ThemeToggle';
 import { links } from './utils/links';
+import { projects } from './utils/projects';
 
 export const App = () => {
   const contactLinks = links.map(({ Icon, tooltipText, href }) => (
@@ -12,18 +14,27 @@ export const App = () => {
   return (
     <div className="flex min-h-dvh flex-col">
       <header className="sticky top-0 z-10 bg-latte-base pt-3 pb-2 transition-colors dark:bg-mocha-base">
-        <div className="mx-auto flex max-w-[600px] justify-end px-5">
+        <div className="mx-auto flex max-w-2xl justify-end px-5">
           <ThemeToggle />
         </div>
       </header>
-      <main className="mx-auto w-full max-w-[600px] flex-1 px-5 py-10">
-        <h1 className="font-display text-2xl leading-[1.334] font-semibold">
+      <main className="mx-auto w-full max-w-2xl flex-1 px-5 py-10">
+        <h1 className="flex items-center gap-2 font-display text-2xl leading-[1.334] font-semibold">
           bo peng
+          <img
+            src="https://play.pokemonshowdown.com/sprites/gen5ani/piplup.gif"
+            alt="Piplup"
+            className="h-8 w-auto"
+          />
         </h1>
         <p>frontend engineer II @ aws</p>
         <div className="mt-4 flex">{contactLinks}</div>
+        <section className="mt-12">
+          <h2 className="font-display text-lg font-semibold">fun endeavors</h2>
+          <ProjectList projects={projects} />
+        </section>
       </main>
-      <footer className="mx-auto w-full max-w-[600px] px-5 py-4">
+      <footer className="mx-auto w-full max-w-2xl px-5 py-4">
         <p className="text-sm opacity-60">© {new Date().getFullYear()}</p>
       </footer>
     </div>

@@ -1,30 +1,32 @@
-import { Email, GitHub, LinkedIn, Description } from '@mui/icons-material';
+import type { IconType } from 'react-icons';
+import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
 
 import resume from '../assets/resume.pdf';
 
 type Links = {
   href: string;
-  Icon: React.FunctionComponent;
+  Icon: IconType;
   tooltipText?: string;
 };
 
 export const links: Links[] = [
   {
     href: 'https://github.com/bopeng95',
-    Icon: GitHub,
+    Icon: FaGithub,
   },
   {
     href: 'https://linkedin.com/in/bopeng95',
-    Icon: LinkedIn,
+    Icon: FaLinkedin,
   },
   {
     href: 'mailto:bopeng95@gmail.com',
-    Icon: Email,
+    Icon: MdEmail,
     tooltipText: 'bopeng95@gmail.com',
   },
   {
     href: resume,
-    Icon: Description,
+    Icon: FaFilePdf,
     tooltipText: 'Resume',
   },
 ];

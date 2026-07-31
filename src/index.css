@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Work Sans', sans-serif;
+  --font-display: 'Sora', sans-serif;
+
+  /* Catppuccin Latte (light) */
+  --color-latte-base: #eff1f5;
+  --color-latte-text: #4c4f69;
+  --color-latte-subtext: #6c6f85;
+
+  /* Catppuccin Mocha (dark) */
+  --color-mocha-base: #1e1e2e;
+  --color-mocha-text: #cdd6f4;
+  --color-mocha-subtext: #a6adc8;
+}
+
+@layer base {
+  body {
+    @apply bg-latte-base font-sans text-latte-text antialiased transition-colors dark:bg-mocha-base dark:text-mocha-text;
+  }
+}
